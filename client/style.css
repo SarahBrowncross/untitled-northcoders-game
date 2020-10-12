@@ -1,0 +1,78 @@
+@font-face { 
+	font-family: Gotham;
+	src: url('./Gotham\ Light.otf')
+}
+
+#header {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	font-family: Gotham, sans-serif;
+	font-size: 1.2em;
+}
+
+h1{
+	margin: 1em;
+}
+
+#logo {
+	width: 400px;
+}
+
+app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Gotham, sans-serif;
+
+}
+
+#text-div{
+	margin: 1.5em;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+#button-div{
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	margin: 20px;
+	font-family: Gotham, sans-serif;
+	background-color: #ba1f31;
+	color: white;
+	border:1px solid #ba1f31;
+	font-size: 18px;
+	border-radius: 4px;
+	padding: 10px 25px;
+	cursor: pointer;
+}
+
+button::before {
+	content: '<';
+}
+
+button::after {
+	position: relative;
+	left: 0;
+	content: ' />';
+	transition: left 0.2s ease-out;
+}
+
+button:hover:after {
+	left: 15px;
+	
+}
+
+
+#score-div {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+#text-div {
+	max-width: 50vw;
+}
