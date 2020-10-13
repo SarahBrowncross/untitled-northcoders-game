@@ -68,11 +68,27 @@ button:hover:after {
 
 
 #score-div {
-	position: absolute;
-	right: 10px;
-	top: 10px;
+	font-weight: bold;
+	font-size: 18px;
 }
 
 #text-div {
 	max-width: 50vw;
+}
+
+#input-box {
+	height: 35px;
+}
+
+#input {
+	color: #ba1f31;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+#highscores {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin: 20px;
+	font-weight: bold;
 }
