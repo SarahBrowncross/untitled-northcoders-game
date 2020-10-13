@@ -23,6 +23,7 @@ document.getElementById('submit').addEventListener('click', (event) => {
 		})
 		.then((res) => res.json())
 		.then((scores) => {
+			highscores.innerHTML = ''
 			scores.forEach((score) => {
 				const scoreDiv = document.createElement('div')
 				scoreDiv.textContent = `Name: ${score.name}. Score: ${score.score}`
