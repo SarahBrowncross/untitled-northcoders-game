@@ -85,9 +85,9 @@ const handleEnding = score => {
 	if(score < 0){
 		ending = "You are the Star Pupil. All the tutors love you and you've made them very happy. I hope you're pleased with this result because you have totally failed."
 	}else if(score < 25){
-		ending = "You are barely bad. Yeah, you've caused some trouble and the tutors have had a worse day than normal, but nothing they can't shrug off with a nice curry and a relaxing evening of Star Trek tonight. You can do better"
+		ending = "You are barely bad. Yeah, you've caused some trouble and the tutors have had a worse day than normal, but nothing they can't shrug off with a nice curry and a relaxing evening of Star Trek tonight. You can do better."
 	}else if(score < 55){
-		ending = "You are unusually unruly. You've caused trouble all day sending the tutors home with a nasty headache and badly in need of a cuddle from their girlfriend/boyfriend/carton of oat milk. But yet - the perfect score is still out there! It's calling you to try again"
+		ending = "You are unusually unruly. You've caused trouble all day sending the tutors home with a nasty headache and badly in need of a cuddle from their girlfriend/boyfriend/carton of oat milk. But yet - the perfect score is still out there! It's calling you to try again."
 	}else{
 		ending = "You are effortlessly evil. The tutors are re-evaluating why they ever thought teaching was a good career choice. You have crushed them utterly! The perfect score - I have nothing more to teach you."
 	}
@@ -125,7 +125,7 @@ const createOption = (text, outcome, next, scoreChange=0) => ({ text, outcome, n
 
 const scenarios = {
     'wake_up': createScenario("It's a lovely day at Northcoders and you are a horrible student. Your mission is to distract and discomfit the tutors using all the tools available to you. Your day starts with kata hour. How do you choose to use it?", [
-        createOption('ignore the katas and make breakfast', "You dawdle your way to the kitchen and make yourself a leisurely breakfast of crunchy-nut cornflakes and coffee. By the time you make it to your desk, it's time for the lecture to start", 'lecture_start_crunchy', 2),
+        createOption('ignore the katas and make breakfast', "You dawdle your way to the kitchen and make yourself a leisurely breakfast of crunchy-nut cornflakes and coffee. By the time you make it to your desk, it's time for the lecture to start.", 'lecture_start_crunchy', 2),
 		createOption('spam the slack chat with distracting memes', "Bad news! The tutors love your hilarious memes. They all comment 😂. You've got their day off to a great start. You lose 2 points.", 'lecture_start', -2),
 		createOption('get on with the katas', "", 'kata_start')
     ]),
@@ -138,7 +138,7 @@ const scenarios = {
 		createOption('continue coding', 'You crack on with your kata and finish it just before the lecture starts', 'lecture_start'),
 		createOption('try the password', '', 'master_database')
 	]),
-	'master_database': createScenario("You copy and paste the url into your browser and type in the password - you're in! You see a jumble of code and information on the screen in front of you but one button jumps out at you: master sketchbook settings", [
+	'master_database': createScenario("You copy and paste the url into your browser and type in the password - you're in! You see a jumble of code and information on the screen in front of you but one button jumps out at you: master sketchbook settings...", [
 		createOption('close the window', "You lose your nerve and close the window. You make a cup of tea to calm yourself and by the time it's brewed it's time for the lecture to begin.", 'lecture_start'),
 		createOption('change the settings', 'You open up the master sketchbook settings and change the default colour to lime green and the style to caligraphy. Chuckling to yourself, you close the browser down and get ready to dial into the lecture', 'lecture_start_green', 5)
 	]),
@@ -189,11 +189,11 @@ const scenarios = {
 
 	'finished_code': createScenario("It's the end of the lecture and Alex has just finished a complicated looking, really informative bit of code - the kind of thing that is going to be really useful during your sprint today. This is your final chance to cause chaos, which gambit do you choose?", [
 		createOption("adjust your speakers so they are pointing directly at your microphone", "the audio feedback creates a high pitched whine, but Alex is quick off the mark and mutes you. You distract everyone, but only for a moment. You gain 1 point", 'programming_start', 1),
-		createOption("unmute yourself, whack up your volume and take a screenshot", "Nice try, but this is an Alex lecture. He smiles and says 'yes, go ahead and screenshot it! This will help you later. You lose 2 points.", 'programming_start', -2),
+		createOption("unmute yourself, whack up your volume and take a screenshot", "Nice try, but this is an Alex lecture. He smiles and says 'yes, go ahead and screenshot it! This will help you later.' You lose 2 points.", 'programming_start', -2),
 		createOption("hold your cat up to the camera and snuggle with her, nose to nose", "The rest of the cohort loses their minds at the cuteness of the scene. The chat fills up with emojis and 'SQUEEEEEEEE'. Alex totally loses focus and forgets to wrap up the lecture. Chaos acheived! You gain 5 points.", 'programming_start', 5)
 	]),
 
-	'programming_start': createScenario("It's time to start coding. It's a solo sprint today so it's up to you and your nchelp requests to wear down the tutors. It's a busy day and they're going to have a lot of requests. How much of their time can you tie up with pointless errors?What's your first move", [
+	'programming_start': createScenario("It's time to start coding. It's a solo sprint today so it's up to you and your nchelp requests to wear down the tutors. It's a busy day and they're going to have a lot of requests. How much of their time can you tie up with pointless errors? What's your first move", [
 		createOption('get cracking on some code', '', 'testing'),
 		createOption('nchelp', "Sam appears. He looks at your blank screen with an air of confusion. 'You haven't even downloaded the repo, there's nothing here for me to help with. Why don't you try and make a start by yourself'. He leaves. This round is not that easy. 0 points.", "programming_start")
 	]),
